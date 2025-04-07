@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>챗봇 모달 테스트</title>
+  </head>
+  <body style="padding: 100px; font-family: sans-serif">
+    <h2>임베디드 챗봇 위젯 테스트 페이지</h2>
+
+    <button id="embedded-chatbot-button">챗봇 열기</button>
+
+    <!-- 위젯 스크립트 로딩 -->
+    <script src="./chatbot-embed.js"></script>
+    <script>
+      EmbeddedChatbot.init({
+        buttonId: "embedded-chatbot-button",
+        modalUrl: "http://localhost:8080/api/modal",
+        modalScriptUrl: "http://localhost:8080/chatbot-modal.js",
+      });
+    </script>
+  </body>
+</html>
